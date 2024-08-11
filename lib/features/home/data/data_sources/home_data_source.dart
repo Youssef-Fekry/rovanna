@@ -15,7 +15,7 @@ abstract class ProductsDataSource {
 
   Future<Either<Failure, List<Productmodel>>> getPopularProducts();
 
-  Future<List<Productmodel>> productsSearch();
+  Future<List<Productmodel>> productsSearch(String search, String categoryId);
 }
 
 class ProductDataSourceImpl extends ProductsDataSource {
@@ -108,10 +108,11 @@ class ProductDataSourceImpl extends ProductsDataSource {
 
   @override
   @override
-  Future<List<Productmodel>> productsSearch() async {
+  Future<List<Productmodel>> productsSearch(
+      String search, String categoryId) async {
     var data = await apiservices.post(
       endPoint: 'products/search',
-      body: {'search': '1', 'category_id': '1'},
+      body: {'search': search, 'category_id': categoryId},
     );
 
     return data;
