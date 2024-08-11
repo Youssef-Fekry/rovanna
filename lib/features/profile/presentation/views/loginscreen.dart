@@ -14,6 +14,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: kPrimaryColor,
           title: const Center(child: Text('Login')),
         ),
@@ -26,9 +27,9 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(height: 60),
-                    Logo(),
+                    const Logo(),
                     const SizedBox(height: 30),
-                    ToggleLoginSignup(isLogin: true),
+                    const ToggleLoginSignup(isLogin: true),
                     const SizedBox(height: 20),
                     const CustomTextField(
                       hintText: 'Mobile number',
@@ -57,7 +58,8 @@ class LoginPage extends StatelessWidget {
                     CustomButton(
                       text: 'Try without account',
                       onPressed: () {
-                        GoRouter.of(context).push(AppRouter.kcustomebottombar);
+                        GoRouter.of(context)
+                            .pushReplacement(AppRouter.kcustomebottombar);
                       },
                       color: Colors.grey.shade300,
                       textColor: Colors.black,
@@ -65,7 +67,7 @@ class LoginPage extends StatelessWidget {
                       height: 50,
                     ),
                     const SizedBox(height: 20),
-                    OrDivider(),
+                    const OrDivider(),
                     const SizedBox(height: 20),
                     CustomButton(
                       text: 'Login with Google',

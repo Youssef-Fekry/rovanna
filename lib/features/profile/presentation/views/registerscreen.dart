@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rovanna_app/core/utils/constans.dart';
 import 'package:rovanna_app/features/profile/presentation/widgets/signup.dart';
 
 class Registerscreen extends StatelessWidget {
@@ -8,11 +7,7 @@ class Registerscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: kPrimaryColor,
-      //   title: const Text('Sign Up'),
-      // ),
-      body:  SignUpPage(),
+      body: SignUpPage(),
     );
   }
 }

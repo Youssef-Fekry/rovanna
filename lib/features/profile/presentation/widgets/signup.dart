@@ -14,6 +14,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: kPrimaryColor,
         title: const Center(child: Text('Sign Up')),
       ),
@@ -75,7 +76,7 @@ class SignUpPage extends StatelessWidget {
                       height: 50,
                     ),
                   ),
-                  AlreadyMemberLogin(),
+                  const AlreadyMemberLogin(),
                 ],
               ),
               const SizedBox(height: 20),

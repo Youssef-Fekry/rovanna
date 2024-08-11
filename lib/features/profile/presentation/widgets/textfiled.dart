@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final bool obscureText;
-  final  TextInputType textinputtype;
+  final TextInputType textinputtype;
 
   const CustomTextField({
-   
-    Key? key,
+    super.key,
     required this.hintText,
-    this.obscureText = false, required this.textinputtype,
-  }) : super(key: key);
+    this.obscureText = false,
+    required this.textinputtype,
+  });
 
   @override
   Widget build(BuildContext context) {

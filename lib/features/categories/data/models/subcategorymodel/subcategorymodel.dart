@@ -1,4 +1,3 @@
-
 class Subcategorymodel {
   int? id;
   String? name;
@@ -7,7 +6,8 @@ class Subcategorymodel {
 
   Subcategorymodel({this.id, this.name, this.parentId, this.image});
 
-  factory Subcategorymodel.fromJson(Map<String, dynamic> json) => Subcategorymodel(
+  factory Subcategorymodel.fromJson(Map<String, dynamic> json) =>
+      Subcategorymodel(
         id: json['id'] as int?,
         name: json['name'] as String?,
         parentId: json['parent_id'] as int?,
