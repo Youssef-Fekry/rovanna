@@ -22,7 +22,7 @@ class ProductDataSourceImpl extends ProductsDataSource {
 
   @override
   Future<List<Productmodel>> getProduct() async {
-    var data = await apiservices.get(endPoint: 'get/1');
+    var data = await apiservices.get(endPoint: 'products/get/1');
 
     List<Productmodel> productList = [];
 
@@ -34,7 +34,7 @@ class ProductDataSourceImpl extends ProductsDataSource {
 
   @override
   Future<List<Productmodel>> getCategoryProducts() async {
-    var data = await apiservices.get(endPoint: 'category/1');
+    var data = await apiservices.get(endPoint: 'products/category/1');
 
     List<Productmodel> productList = [];
 
@@ -46,7 +46,7 @@ class ProductDataSourceImpl extends ProductsDataSource {
 
   @override
   Future<List<Productmodel>> getCosmeticsProducts() async {
-    var data = await apiservices.get(endPoint: 'cosmetics');
+    var data = await apiservices.get(endPoint: 'products/cosmetics');
 
     List<Productmodel> productList = [];
 
@@ -58,7 +58,7 @@ class ProductDataSourceImpl extends ProductsDataSource {
 
   @override
   Future<List<Productmodel>> getFashionProducts() async {
-    var data = await apiservices.get(endPoint: 'fashion');
+    var data = await apiservices.get(endPoint: 'products/fashion');
 
     List<Productmodel> productList = [];
 
@@ -70,7 +70,7 @@ class ProductDataSourceImpl extends ProductsDataSource {
 
   @override
   Future<List<Productmodel>> getPopularProducts() async {
-    var data = await apiservices.get(endPoint: 'popular');
+    var data = await apiservices.get(endPoint: 'products/popular');
 
     List<Productmodel> productList = [];
 
@@ -83,7 +83,7 @@ class ProductDataSourceImpl extends ProductsDataSource {
   @override
   Future<List<Productmodel>> productsSearch() async {
     var data = await apiservices.post(
-      endPoint: 'search',
+      endPoint: 'products/search',
       body: {'search': '1', 'category_id': '1'},
     );
 

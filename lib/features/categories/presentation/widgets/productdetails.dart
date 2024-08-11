@@ -98,7 +98,7 @@ class ProductDetails extends StatelessWidget {
             const SizedBox(height: 4),
             Text(
               label,
-              style:const TextStyle(color: Colors.black),
+              style: const TextStyle(color: Colors.black),
             ),
           ],
         ),
@@ -114,7 +114,7 @@ class ProductDetails extends StatelessWidget {
         child: Chip(
             label: Text(
           size,
-          style:const TextStyle(),
+          style: const TextStyle(),
         )),
       ),
     );
