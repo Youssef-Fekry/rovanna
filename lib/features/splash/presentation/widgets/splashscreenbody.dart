@@ -26,6 +26,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   @override
+  void dispose() {
+    // Dispose of the animation controller to avoid the Ticker error
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(

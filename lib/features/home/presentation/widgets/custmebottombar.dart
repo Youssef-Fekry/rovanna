@@ -15,7 +15,7 @@ class Custmebottombar extends StatefulWidget {
 }
 
 class _CustmebottombarState extends State<Custmebottombar> {
-  int myCurrentIndex = 2; // Set the default index to 2 for the Home screen
+  int myCurrentIndex = 2; //  the default index is 2 for the Home screen
   List pages = [
     const Profilescreen(),
     const Wishlsitscreen(),

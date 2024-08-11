@@ -7,6 +7,7 @@ import 'package:rovanna_app/features/home/presentation/widgets/custmebottombar.d
 import 'package:rovanna_app/features/profile/presentation/views/aboutusscreen.dart';
 import 'package:rovanna_app/features/profile/presentation/views/loginscreen.dart';
 import 'package:rovanna_app/features/profile/presentation/views/registerscreen.dart';
+import 'package:rovanna_app/features/profile/presentation/widgets/signup.dart';
 import 'package:rovanna_app/features/splash/presentation/views/splashscreen.dart';
 
 abstract class AppRouter {
@@ -18,8 +19,9 @@ abstract class AppRouter {
   static const kAccessoriesScreen = '/AccessoriesScreen';
   static const kcosmeticesScreen = '/cosmeticsscreen';
   static const kAboutUsScreen = '/aboutusscreen';
+  static const kSignUp = '/signup';
+  static const kLogin = '/loginscreen';
   static const kRegister = '/registerscreen';
-  static const klogin = '/loginscreen';
 
   static final router = GoRouter(
     routes: [
@@ -52,12 +54,16 @@ abstract class AppRouter {
         builder: (context, state) => const AboutUsScreen(),
       ),
       GoRoute(
-        path: kRegister,
-        builder: (context, state) => const Registerscreen(),
+        path: kSignUp,
+        builder: (context, state) => const SignUpPage(),
       ),
       GoRoute(
-        path: klogin,
-        builder: (context, state) => const Loginscreen(),
+        path: kLogin,
+        builder: (context, state) => const LoginPage(),
+      ),
+      GoRoute(
+        path: kRegister,
+        builder: (context, state) => const Registerscreen(),
       ),
     ],
   );
