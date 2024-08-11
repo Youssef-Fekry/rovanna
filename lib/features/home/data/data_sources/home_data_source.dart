@@ -114,7 +114,6 @@ class ProductDataSourceImpl extends ProductsDataSource {
       endPoint: 'products/search',
       body: {'search': search, 'category_id': categoryId},
     );
-
     return data;
   }
 }
