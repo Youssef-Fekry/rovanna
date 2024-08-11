@@ -7,9 +7,15 @@ import 'package:rovanna_app/features/profile/presentation/widgets/logo.dart';
 import 'package:rovanna_app/features/profile/presentation/widgets/textfiled.dart';
 import 'package:rovanna_app/features/profile/presentation/widgets/toggile.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 
+  @override
+  State<SignUpPage> createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,34 +37,34 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(height: 20),
               const CustomTextField(
                 hintText: 'First Name',
-                textinputtype: TextInputType.text,
+                textinputtype: TextInputType.text, inputControl: null,
               ),
               const SizedBox(height: 10),
               const CustomTextField(
                 hintText: 'Last Name',
-                textinputtype: TextInputType.text,
+                textinputtype: TextInputType.text, inputControl: null,
               ),
               const SizedBox(height: 10),
               const CustomTextField(
                 hintText: 'Email',
-                textinputtype: TextInputType.emailAddress,
+                textinputtype: TextInputType.emailAddress, inputControl: null,
               ),
               const SizedBox(height: 10),
               const CustomTextField(
                 hintText: 'Mobile number',
-                textinputtype: TextInputType.phone,
+                textinputtype: TextInputType.phone, inputControl: null,
               ),
               const SizedBox(height: 10),
               const CustomTextField(
                 hintText: 'Password',
                 obscureText: true,
-                textinputtype: TextInputType.visiblePassword,
+                textinputtype: TextInputType.visiblePassword, inputControl: null,
               ),
               const SizedBox(height: 10),
               const CustomTextField(
                 hintText: 'Confirm password',
                 obscureText: true,
-                textinputtype: TextInputType.visiblePassword,
+                textinputtype: TextInputType.visiblePassword, inputControl: null,
               ),
               const SizedBox(height: 20),
               Row(

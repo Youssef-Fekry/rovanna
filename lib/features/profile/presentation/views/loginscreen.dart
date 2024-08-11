@@ -15,8 +15,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController phonecontroller = TextEditingController();
-  TextEditingController passwordcontroller = TextEditingController();
+  // TextEditingController phonecontroller = TextEditingController();
+  // TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,17 +39,17 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 30),
                     const ToggleLoginSignup(isLogin: true),
                     const SizedBox(height: 20),
-                    CustomTextField(
+                    const CustomTextField(
                       hintText: 'Mobile number',
                       textinputtype: TextInputType.number,
-                      inputControl: phonecontroller,
+                      // inputControl: phonecontroller,
                     ),
                     const SizedBox(height: 10),
-                    CustomTextField(
+                    const CustomTextField(
                       hintText: 'Password',
                       obscureText: true,
                       textinputtype: TextInputType.visiblePassword,
-                      inputControl: passwordcontroller,
+                      // inputControl: passwordcontroller,
                     ),
                     const SizedBox(height: 20),
                     SizedBox(

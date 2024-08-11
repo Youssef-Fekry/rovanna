@@ -7,7 +7,7 @@ import 'package:rovanna_app/features/home/presentation/widgets/custmebottombar.d
 import 'package:rovanna_app/features/profile/presentation/views/aboutusscreen.dart';
 import 'package:rovanna_app/features/profile/presentation/views/loginscreen.dart';
 import 'package:rovanna_app/features/profile/presentation/views/registerscreen.dart';
-import 'package:rovanna_app/features/profile/presentation/widgets/signup.dart';
+import 'package:rovanna_app/features/profile/presentation/views/signup_screen.dart';
 import 'package:rovanna_app/features/splash/presentation/views/splashscreen.dart';
 
 abstract class AppRouter {

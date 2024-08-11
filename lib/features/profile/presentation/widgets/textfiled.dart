@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final bool obscureText;
   final TextInputType textinputtype;
-  final TextEditingController inputControl;
+  final TextEditingController? inputControl;
 
   const CustomTextField({
     super.key,
     required this.hintText,
     this.obscureText = false,
-    required this.textinputtype, required this.inputControl,
+    required this.textinputtype,
+    this.inputControl,
   });
 
   @override
