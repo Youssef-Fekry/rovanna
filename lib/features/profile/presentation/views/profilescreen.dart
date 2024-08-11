@@ -54,10 +54,10 @@ class Profilescreen extends StatelessWidget {
         },
       ),
       Customebar(
-        icon: const Icon(Icons.logout),
-        text: 'Logout',
+        icon: const Icon(Icons.login),
+        text: 'login',
         ontap: () {
-          // GoRouter.of(context).push(AppRouter.kAboutUsScreen);
+          GoRouter.of(context).push(AppRouter.kRegister);
         },
       ),
     ];
