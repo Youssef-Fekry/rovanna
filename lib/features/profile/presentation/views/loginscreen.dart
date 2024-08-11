@@ -7,8 +7,16 @@ import 'package:rovanna_app/features/profile/presentation/widgets/logo.dart';
 import 'package:rovanna_app/features/profile/presentation/widgets/textfiled.dart';
 import 'package:rovanna_app/features/profile/presentation/widgets/toggile.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  TextEditingController phonecontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +30,7 @@ class LoginPage extends StatelessWidget {
           slivers: [
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -31,15 +39,17 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(height: 30),
                     const ToggleLoginSignup(isLogin: true),
                     const SizedBox(height: 20),
-                    const CustomTextField(
+                    CustomTextField(
                       hintText: 'Mobile number',
                       textinputtype: TextInputType.number,
+                      inputControl: phonecontroller,
                     ),
                     const SizedBox(height: 10),
-                    const CustomTextField(
+                    CustomTextField(
                       hintText: 'Password',
                       obscureText: true,
                       textinputtype: TextInputType.visiblePassword,
+                      inputControl: passwordcontroller,
                     ),
                     const SizedBox(height: 20),
                     SizedBox(
