@@ -79,11 +79,14 @@ class ProductDataSourceImpl extends ProductsDataSource {
     }
     return productList;
   }
-  
-  @override
-  Future<List<Productmodel>> productsSearch() {
-    // TODO: implement productsSearch
-    throw UnimplementedError();
-  }
-  }
 
+  @override
+  Future<List<Productmodel>> productsSearch() async {
+    var data = await apiservices.post(
+      endPoint: 'search',
+      body: {'search': '1', 'category_id': '1'},
+    );
+
+    return data;
+  }
+}

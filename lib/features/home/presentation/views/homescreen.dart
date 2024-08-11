@@ -10,9 +10,17 @@ class Homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('rovanna'),
-          backgroundColor: kPrimaryColor,
-        ),
+            title: const Text('rovanna'),
+            backgroundColor: kPrimaryColor,
+            actions: <Widget>[
+              IconButton(
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
+                onPressed: () {},
+              ),
+            ]),
         drawer: const Customedrawer(),
         body: const Homeviewbody());
   }
