@@ -1,0 +1,11 @@
+// Column(
+    //   children: [
+    //     const Expanded(flex: 2, child: AutoScrollableScreen()),
+    //     Flexible(
+    //       flex: 1,
+    //       child: categoryGrid(context),
+    //     ),
+    //     Lable(nameofCategory: 'Fashion', view: 'View All', ontap: () {}),
+    //     Expanded(flex: 2, child: Itemslistview())
+    //   ],
+    // );
