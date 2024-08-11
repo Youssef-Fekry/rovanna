@@ -35,6 +35,7 @@ class Productmodel {
   String? categoryName;
   String? brandName;
   String? vendorName;
+  String? userId;
   List<dynamic>? colors;
   List<dynamic>? sizes;
   List<dynamic>? variants;
@@ -75,6 +76,7 @@ class Productmodel {
     this.colors,
     this.sizes,
     this.variants,
+    this.userId
   });
 
   factory Productmodel.fromJson(Map<String, dynamic> json) => Productmodel(
@@ -154,6 +156,7 @@ class Productmodel {
         'category_name': categoryName,
         'brand_name': brandName,
         'vendor_name': vendorName,
+        'user_Id':  userId,
         'colors': colors?.map((e) => e.toJson()).toList(),
         'sizes': sizes?.map((e) => e.toJson()).toList(),
         'variants': variants?.map((e) => e.toJson()).toList(),
