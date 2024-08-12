@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rovanna_app/core/utils/constans.dart';
 import 'package:rovanna_app/features/categories/presentation/widgets/custom_buttons_favo_add.dart';
 import 'package:rovanna_app/features/categories/presentation/widgets/custom_price_lable.dart';
 import 'package:rovanna_app/features/categories/presentation/widgets/cutom_product_des.dart';
 import 'package:rovanna_app/features/categories/presentation/widgets/imageproductcard.dart';
-import 'package:rovanna_app/features/categories/presentation/widgets/product_details_show_Modal_Bottom_Sheet.dart';
-import 'package:rovanna_app/features/profile/presentation/widgets/custombutton.dart';
 
 class ProductCard extends StatelessWidget {
   final VoidCallback ontap;
