@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rovanna_app/core/utils/constans.dart';
+import 'package:rovanna_app/features/categories/presentation/widgets/productgrid.dart';
 
 class FashionScreen extends StatelessWidget {
   const FashionScreen({super.key});
@@ -11,6 +12,6 @@ class FashionScreen extends StatelessWidget {
           backgroundColor: kPrimaryColor,
           title: const Text('Fashion'),
         ),
-        body: Container());
+        body: const Productgrid());
   }
 }

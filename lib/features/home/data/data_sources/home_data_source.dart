@@ -3,25 +3,13 @@ import 'package:dio/dio.dart';
 import 'package:rovanna_app/core/errors/failures.dart';
 import 'package:rovanna_app/core/helper/api.dart';
 import 'package:rovanna_app/features/home/data/models/product_model.dart';
+import 'package:rovanna_app/features/home/domain/repos/product_repo.dart';
 
-abstract class ProductsDataSource {
-  Future<Either<Failure, List<Productmodel>>> getCategoryProducts();
 
-  Future<Either<Failure, List<Productmodel>>> getProduct();
-
-  Future<Either<Failure, List<Productmodel>>> getFashionProducts();
-
-  Future<Either<Failure, List<Productmodel>>> getCosmeticsProducts();
-
-  Future<Either<Failure, List<Productmodel>>> getPopularProducts();
-
-  Future<List<Productmodel>> productsSearch(String search, String categoryId);
-}
-
-class ProductDataSourceImpl extends ProductsDataSource {
+class ProductDataSourceRepoImpl extends ProductsRepo {
   final Apiservices apiservices;
 
-  ProductDataSourceImpl(this.apiservices);
+  ProductDataSourceRepoImpl(this.apiservices);
 
   @override
   Future<Either<Failure, List<Productmodel>>> getProduct() async {

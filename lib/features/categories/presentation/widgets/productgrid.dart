@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rovanna_app/core/utils/media.dart';
 import 'package:rovanna_app/features/categories/presentation/widgets/categorybutton.dart';
 import 'package:rovanna_app/features/categories/presentation/widgets/productsitems.dart';
 
@@ -83,10 +82,8 @@ class _ProductgridState extends State<Productgrid> {
               ),
               itemCount: 10,
               itemBuilder: (context, index) {
-                return const ProductCard(
-                  imageUrl: AssetImage(Media.categoryAccessories),
-                  name: 'Product Name',
-                  price: '1234.00 LE',
+                return ProductCard(
+                  ontap: () {},
                 );
               },
             ),

@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:rovanna_app/core/utils/constans.dart';
-import 'package:rovanna_app/features/categories/presentation/widgets/productdetails.dart';
+import 'package:rovanna_app/features/categories/presentation/widgets/custom_buttons_favo_add.dart';
+import 'package:rovanna_app/features/categories/presentation/widgets/custom_price_lable.dart';
+import 'package:rovanna_app/features/categories/presentation/widgets/cutom_product_des.dart';
+import 'package:rovanna_app/features/categories/presentation/widgets/imageproductcard.dart';
+import 'package:rovanna_app/features/categories/presentation/widgets/product_details_show_Modal_Bottom_Sheet.dart';
+import 'package:rovanna_app/features/profile/presentation/widgets/custombutton.dart';
 
 class ProductCard extends StatelessWidget {
-  final ImageProvider imageUrl;
-  final String name;
-  final String price;
+  final VoidCallback ontap;
 
-  const ProductCard(
-      {super.key,
-      required this.imageUrl,
-      required this.name,
-      required this.price});
+  const ProductCard({
+    super.key,
+    required this.ontap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,56 +21,17 @@ class ProductCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: ClipRRect(
-              borderRadius:
-                  const BorderRadius.vertical(top: Radius.circular(10)),
-              child: Image(image: imageUrl, fit: BoxFit.cover),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(name,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Text(price,
-                style: const TextStyle(fontSize: 14, color: Colors.grey)),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.favorite_border),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    showModalBottomSheet(
-                        isScrollControlled: true,
-                        context: context,
-                        builder: (BuildContext bc) {
-                          return const ProductDetails();
-                        });
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(),
-                    backgroundColor: kPrimaryColor,
-                    padding: const EdgeInsets.all(10),
-                  ),
-                  child: const Icon(Icons.add),
-                ),
-              ],
-            ),
-          ),
-        ],
+      child: GestureDetector(
+        onTap: ontap,
+        child: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Imageproductcard(),
+            CutomProductDes(),
+            CustomPriceLable(),
+            CustomButtonsFavoAdd(),
+          ],
+        ),
       ),
     );
   }

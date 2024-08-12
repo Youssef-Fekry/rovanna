@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rovanna_app/core/utils/constans.dart';
+import 'package:rovanna_app/core/utils/media.dart';
 
 class ProductDetails extends StatelessWidget {
   const ProductDetails({super.key});
@@ -17,6 +18,15 @@ class ProductDetails extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+             const Center(
+                child: SizedBox(
+                  height: 100,
+                  width: 60,
+                  child: Image(
+                    image: AssetImage(Media.categoryAccessories),
+                  ),
+                ),
+              ),
               const Row(
                 children: [
                   Expanded(

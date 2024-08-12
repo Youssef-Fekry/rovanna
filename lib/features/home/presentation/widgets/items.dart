@@ -14,7 +14,9 @@ class Items extends StatelessWidget {
           height: 100,
           width: 80,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              
+            },
             child: Image(
               image: image,
               fit: BoxFit.contain,

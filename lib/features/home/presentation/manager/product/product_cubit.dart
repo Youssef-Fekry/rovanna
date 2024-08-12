@@ -6,7 +6,7 @@ import 'package:rovanna_app/features/home/domain/repos/product_repo.dart';
 part 'product_state.dart';
 
 class ProductCubit extends Cubit<ProductState> {
-  ProductCubit(super.initialState, this.productsRepo);
+  ProductCubit( this.productsRepo) : super(GetProductInitial());
   final ProductsRepo productsRepo;
 
   Future<void> getProduct() async {
