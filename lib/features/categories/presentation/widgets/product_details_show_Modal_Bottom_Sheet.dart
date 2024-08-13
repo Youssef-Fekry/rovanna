@@ -1,6 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:rovanna_app/core/utils/constans.dart';
 import 'package:rovanna_app/core/utils/media.dart';
+import 'package:rovanna_app/features/profile/presentation/widgets/color_options.dart';
 
 class ProductDetails extends StatelessWidget {
   const ProductDetails({super.key});
@@ -18,7 +20,7 @@ class ProductDetails extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-             const Center(
+              const Center(
                 child: SizedBox(
                   height: 100,
                   width: 60,
@@ -50,15 +52,12 @@ class ProductDetails extends StatelessWidget {
               const Text('Select Color',
                   style: TextStyle(fontSize: 16, color: Colors.black)),
               const SizedBox(height: 8),
-              Row(
+              const Row(
                 children: [
-                  _buildColorOption(
-                    Colors.blue,
-                    'Blue',
-                  ),
-                  _buildColorOption(Colors.red, 'Red'),
-                  _buildColorOption(Colors.white, 'White'),
-                  _buildColorOption(Colors.pink, 'Pink'),
+                  ColorOption(colors: Colors.blue, label: 'Blue'),
+                  ColorOption(colors: Colors.red, label: 'Red'),
+                  ColorOption(colors: Colors.black, label: 'Black'),
+                  ColorOption(colors: Colors.pink, label: 'pink'),
                 ],
               ),
               const SizedBox(height: 16),
@@ -92,25 +91,6 @@ class ProductDetails extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildColorOption(Color color, String label) {
-    return GestureDetector(
-      onTap: () {},
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 4.0),
-        child: Column(
-          children: [
-            CircleAvatar(backgroundColor: color),
-            const SizedBox(height: 4),
-            Text(
-              label,
-              style: const TextStyle(color: Colors.black),
-            ),
-          ],
         ),
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rovanna_app/core/utils/constans.dart';
-import 'package:rovanna_app/features/categories/presentation/widgets/product_details_show_Modal_Bottom_Sheet.dart';
+import 'package:rovanna_app/features/categories/presentation/widgets/product_details_show_modal_bottom_sheet.dart';
 
 class CustomButtonsFavoAdd extends StatelessWidget {
   const CustomButtonsFavoAdd({super.key});
