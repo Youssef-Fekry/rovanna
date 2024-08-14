@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">Rovanna</string>
-    <string name="facebook_app_id">3605414139716789</string>
-    <string name="fb_login_protocol_scheme">fb3605414139716789</string>
-    <string name="facebook_client_token">338a64914498b41c54912ea2d7a5dcd9</string>
-
-</resources>
